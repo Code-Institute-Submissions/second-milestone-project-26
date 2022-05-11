@@ -31,16 +31,92 @@ body {
 }
 
 .titleContainer {
-    margin: 0 5px;
+    margin: 0 10px;
     text-align: center;
 }
 
 .titleContainer i {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 #titleText {
     font-size: 1.25em;
     font-weight: 700;
     word-spacing: 2px;
+}
+
+/* Audio Controls */
+
+#audioBar {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+
+.audioContainer {
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 40px;
+}
+
+.audioContainer h4 {
+    font-size: 1em;
+    color: #ff9e01;
+    margin: 0 5px 0 5px;
+}
+
+    /* Switch styling from W3schools guide */
+
+.audioSwitch {
+    position: absolute;
+    right: 5px;
+    width: 44px;
+    height: 24px;
+}
+
+.audioSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #c80000;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #c80000;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
 }
