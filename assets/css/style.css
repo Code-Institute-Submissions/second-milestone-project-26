@@ -6,15 +6,20 @@
     border: none;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Radio Canada', sans-serif;
+    height: 100%;
 }
 
 /* Heading */
 
 #pageHead {
     position: relative;
-    height: 125px;
+    height: 12.5%;
     width: 100%;
     background-color: rgba(73, 75, 35, 0.9);
 }
@@ -26,7 +31,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 125px;
+    height: 100%;
     color: #ff9e01;
 }
 
@@ -49,7 +54,7 @@ body {
 
 #audioBar {
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 10px;
 }
 
@@ -125,9 +130,10 @@ input:checked+.slider:before {
 
 #heroImage {
     max-width: 100%;
-    height: 825px;
+    height: 80%;
     background-image: url(../images/history_background_desktop.jpeg);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -209,27 +215,28 @@ input:checked+.slider:before {
 
 footer {
     width: 100%;
-    height: 52px;
+    height: 7.5%;
     background-color: rgba(73, 75, 35, 0.9);
 }
 
 /* Media queries */
 
-/* For screens 1100px or below */
+/*For screens 1100px or below */
 
 @media screen and (max-width: 1100px) {
 
-    #heroImage {
-        height: 675px;
+    #audioBar {
+        top: 15px;
     }
+
 }
 
-/* For screens 800px or below */
+/* For screens 950px or below */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
 
     #pageHead {
-        height: 130px;
+        height: 15%;
     }
 
     #titleBar {
@@ -269,7 +276,23 @@ footer {
     }
 
     #heroImage {
-        height: 670px;
+        background-image: url(../images/history_background_mobile.jpeg);
+        height: 77.5%;
+    }
+
+    .quiz {
+        top: 50px;
+        width: 80%;
+        height: 450px
+    }
+
+    .text {
+        top: 30px;
+        height: 260px;
+    }
+
+    .button {
+        top: 50px;
     }
 }
 
@@ -316,6 +339,5 @@ footer {
 
     #heroImage {
         background-image: url(../images/history_background_mobile.jpeg);
-        height: 725px;
     }
 }
