@@ -120,3 +120,88 @@ input:checked + .slider:before {
     -ms-transform: translateX(20px);
     transform: translateX(20px);
 }
+
+/* Media queries*/
+
+/*For screens 800px or below*/
+
+@media screen and (max-width: 800px) {
+
+    #pageHead {
+        height: 130px;
+    }
+
+    #titleBar {
+        height: 85px;
+    }
+
+    .titleContainer i{
+        font-size: 2em;
+    }
+
+    #titleText {
+        font-size: 1em;
+    }
+
+    #audioBar {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .audioContainer {
+        width: 115px;
+    }
+
+    .audioSwitch {
+        position: relative;
+        left: 5px;
+        height: 28px;
+        width: 48px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+/* For screens below 450 pixels */
+
+#pageHead {
+    height: 150px;
+}
+
+#titleBar {
+    height: 100px;
+}
+
+#titleText {
+    margin-top: 15px;
+    font-size: 0.85em;
+}
+
+#audioBar {
+    height: 50px;
+}
+
+.audioContainer h4 {
+    font-size: 0.75em;
+}
+
+.audioContainer {
+    width: 100px;
+}
+
+.audioSwitch {
+    position: relative;
+    left: 5px;
+    height: 20px;
+    width: 40px;
+}
+
+.slider:before {
+    height: 12px;
+    width: 12px;
+}
