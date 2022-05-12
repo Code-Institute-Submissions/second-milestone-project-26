@@ -121,6 +121,23 @@ input:checked + .slider:before {
     transform: translateX(20px);
 }
 
+/*Hero Image */
+
+#heroImage {
+    max-width: 100%;
+    height: 825px;
+    background-image: url(../images/history_background_desktop.jpeg);
+    background-size: cover;
+}
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    height: 52px;
+    background-color: rgba(73, 75, 35, 0.9);
+}
+
 /* Media queries*/
 
 /*For screens 800px or below*/
