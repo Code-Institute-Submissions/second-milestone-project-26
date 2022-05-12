@@ -169,6 +169,8 @@ input:checked + .slider:before {
 
 /* For screens below 450 pixels */
 
+@media screen and (max-width: 450px) {
+
 #pageHead {
     height: 150px;
 }
@@ -204,4 +206,6 @@ input:checked + .slider:before {
 .slider:before {
     height: 12px;
     width: 12px;
+}
+
 }
