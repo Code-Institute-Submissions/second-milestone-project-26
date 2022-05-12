@@ -340,4 +340,28 @@ footer {
     #heroImage {
         background-image: url(../images/history_background_mobile.jpeg);
     }
+
+    .quiz {
+        top: 30px;
+        width: 90%;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .text p {
+        margin: 0 2px;
+    }
+
+    .button {
+        width: 90%;
+    }
+
+    .btn {
+        height: 85px;
+        width: 85px;
+        margin: 15px 5px;
+        font-size: 1.15em;
+    }
 }
