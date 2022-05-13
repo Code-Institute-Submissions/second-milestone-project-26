@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,21 +14,52 @@
     <script src="https://kit.fontawesome.com/1a51ae6865.js" crossorigin="anonymous"></script>
     <title>History Quiz of the World</title>
 </head>
+
 <body>
-    <header> Page Title, Logo, and sound options</header>
-    <section> Main body of the webisite, with background image in place.
-        <div> Quiz game container
-            <div> Question and answer container</div>
-            <div> Answer options container
-                <span>Answer 1</span>
-                <span>Answer 2</span>
-                <span>Answer 3</span>
+    <header id="pageHead">
+        <div id="titleBar">
+            <span class="titleContainer">
+                <i class="fa-solid fa-earth-africa titleIcon"></i>
+            </span>
+            <span class="titleContainer" id="titleText">
+                <h1>History Quiz of the World</h1>
+                <p>A general knowledge quiz for the discerning history buff!</p>
+            </span>
+            <span class="titleContainer">
+                <i class="fa-solid fa-book-atlas titleIcon"></i>
+            </span>
+        </div>
+        <div id="audioBar">
+            <div class="audioContainer">
+                <h4>Music</h4>
+                <label class="audioSwitch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="audioContainer">
+                <h4>Sounds</h4>
+                <label class="audioSwitch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
             </div>
         </div>
-        <div>Progress container</div>
-        <div> Return navigation container</div>
+    </header>
+    <section id="heroImage">
+        <div class="container quiz">
+            <div class="container text">
+                <p id="textContent">Questions and Answers go here!</p>
+            </div>
+            <div class="container button">
+                <button class="btn easy">Easy</button>
+                <button class="btn medium">Medium</button>
+                <button class="btn hard">Hard</button>
+            </div>
+        </div>
     </section>
     <footer>Social Media links</footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

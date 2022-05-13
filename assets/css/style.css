@@ -213,10 +213,20 @@ input:checked+.slider:before {
 
 /* Footer */
 
-footer {
+#pageFoot {
+    display: flex;
+    align-items: center;
+    justify-content: right;
     width: 100%;
     height: 7.5%;
     background-color: rgba(73, 75, 35, 0.9);
+}
+
+.linkSocial {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ff9e01;
+    font-size: 2.5em;
 }
 
 /* Media queries */
