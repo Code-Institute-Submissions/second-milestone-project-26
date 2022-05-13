@@ -19,39 +19,45 @@
     <!-- Page Heading-->
     <header id="pageHead">
         <!--Title-->
-            <div id="titleBar">
-                <span class="titleContainer">
-                    <i class="fa-solid fa-earth-africa titleIcon"></i>
-                </span>
-                <span class="titleContainer" id="titleText">
-                    <h1>History Quiz of the World</h1>
-                    <p>A general knowledge quiz for the discerning history buff!</p>
-                </span>
-                <span class="titleContainer">
-                    <i class="fa-solid fa-book-atlas titleIcon"></i>
-                </span>
+        <div id="titleBar">
+            <span class="titleContainer">
+                <i class="fa-solid fa-earth-africa titleIcon"></i>
+            </span>
+            <span class="titleContainer" id="titleText">
+                <h1>History Quiz of the World</h1>
+                <p>A general knowledge quiz for the discerning history buff!</p>
+            </span>
+            <span class="titleContainer">
+                <i class="fa-solid fa-book-atlas titleIcon"></i>
+            </span>
+        </div>
+        <!--Audio controls-->
+        <div id="audioBar">
+            <div class="audioContainer">
+                <h4>Music</h4>
+                <audio id="backgroundMusic" autoplay loop muted>
+                    <source src="assets/audio/backgroundmusic.mp3" type="audio/mpeg">
+                </audio>
+                <label class="audioSwitch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
             </div>
-            <!--Audio controls-->
-            <div id="audioBar">
-                <div class="audioContainer">
-                    <h4>Music</h4>
-                    <label class="audioSwitch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="audioContainer">
-                    <h4>Sounds</h4>
-                    <label class="audioSwitch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
+            <div class="audioContainer">
+                <h4>Sounds</h4>
+                <audio id="answerSound" muted>
+                    <source src="assets/audio/questionanswer.mp3" type="audio/mpeg">
+                </audio>
+                <label class="audioSwitch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
             <!--Navigation Link-->
-            </div>
-            <div id="navContainer">
-                <a href="index.html">Home</a>
-            </div>
+        </div>
+        <div id="navContainer">
+            <a href="index.html">Home</a>
+        </div>
     </header>
     <!--Main Page-->
     <section id="heroImage">
