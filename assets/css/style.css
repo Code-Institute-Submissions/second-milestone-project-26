@@ -126,6 +126,23 @@ input:checked+.slider:before {
     transform: translateX(20px);
 }
 
+/* Home navigation button */
+
+#navContainer {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+#navContainer a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff9e01;
+    font-size: 2em;
+    font-weight: 700;
+}
+
 /* Hero Image */
 
 #heroImage {
