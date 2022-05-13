@@ -193,8 +193,10 @@ input:checked+.slider:before {
     font-weight: 700;
 }
 
-.btn p {
+.btn p, .btn a {
     font-size: 1.25vw;
+    text-decoration: none;
+    color: black;
 }
 
 .btn:hover {
@@ -369,8 +371,10 @@ input:checked+.slider:before {
         top: 50px;
     }
 
-    .btn p {
+    .btn p, .btn a {
         font-size: 1.5vw;
+        text-decoration: none;
+        color: black;
     }
 
     .progress {
@@ -451,8 +455,10 @@ input:checked+.slider:before {
         margin: 10px 1px;
     }
 
-    .btn p {
+    .btn p, .btn a {
         font-size: 2.5vw;
+        text-decoration: none;
+        color: black;
     }
 
     .progress {
