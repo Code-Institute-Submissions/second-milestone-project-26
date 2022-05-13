@@ -151,14 +151,14 @@ input:checked+.slider:before {
 .quiz {
     top: 75px;
     width: 60%;
-    height: 550px;
+    min-height: 550px;
     background-color: rgba(73,75,35,0.95);
 }
 
 .text {
     top: 50px;
     width: 80%;
-    height: 300px;
+    min-height: 300px;
     background-color: rgba(255, 112, 0, 0.75);
     display: flex;
     justify-content: center;
@@ -176,7 +176,7 @@ input:checked+.slider:before {
 .button {
     top: 60px;
     width: 80%;
-    height: 110px;
+    min-height: 110px;
     background-color: rgba(255, 112, 0, 0.75);
     display: flex;
     justify-content: center;
@@ -185,13 +185,16 @@ input:checked+.slider:before {
 /* Buttons */
 
 .btn {
-    height: 90px;
-    width: 125px;
-    margin: 10px 25px;
+    min-height: 90px;
+    width: 200px;
+    margin: 10px 5px;
     border: solid 1px #79081c;
     border-radius: 15px;
-    font-size: 1.75em;
     font-weight: 700;
+}
+
+.btn p {
+    font-size: 1.25vw;
 }
 
 .btn:hover {
@@ -209,6 +212,11 @@ input:checked+.slider:before {
 
 .hard {
     background-color: #c80000;
+}
+
+.option {
+    background-color: white;
+    height: fit-content;
 }
 
 /* Progress Bar */
@@ -284,12 +292,12 @@ input:checked+.slider:before {
 
     .quiz {
         top: 50px;
-        height: 475px;
+        min-height: 475px;
     }
 
     .text {
         top: 30px;
-        height: 275px;
+        min-height: 275px;
     }
 
     .progress {
@@ -306,7 +314,7 @@ input:checked+.slider:before {
     }
 
     #titleBar {
-        height: 85px;
+        min-height: 85px;
     }
 
     .titleContainer i {
@@ -349,25 +357,30 @@ input:checked+.slider:before {
     .quiz {
         top: 50px;
         width: 80%;
-        height: 450px
+        min-height: 450px
     }
 
     .text {
         top: 30px;
-        height: 260px;
+        min-height: 260px;
     }
 
     .button {
         top: 50px;
     }
 
-    #pageFoot {
-        justify-content: center;
+    .btn p {
+        font-size: 1.5vw;
     }
 
     .progress {
         width: 80%;
     }
+
+    #pageFoot {
+        justify-content: center;
+    }
+
 }
 
 /* For screens below 450 pixels */
@@ -433,10 +446,13 @@ input:checked+.slider:before {
     }
 
     .btn {
-        height: 85px;
-        width: 85px;
-        margin: 15px 5px;
-        font-size: 1.15em;
+        min-height: 90px;
+        width: 110px;
+        margin: 10px 1px;
+    }
+
+    .btn p {
+        font-size: 2.5vw;
     }
 
     .progress {
