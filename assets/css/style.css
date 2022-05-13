@@ -211,6 +211,49 @@ input:checked+.slider:before {
     background-color: #c80000;
 }
 
+/* Progress Bar */
+
+.progress {
+    top: 95px;
+    width: 60%;
+    height: 100px;
+    border: none;
+}
+
+#progressBorder {
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 40px;
+    border: solid 2px #79081c;
+    border-radius: 15px;
+    background-color: rgba(73, 75, 35, 0.9);
+}
+
+#progressBar {
+    width: 2%;
+    height: 40px;
+    background-color: #79081c;
+    border-radius: 15px;
+}
+
+#progressText {
+    display: block;
+    margin: 10px auto;
+    padding: 0 15px;
+    width: fit-content;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #79081c;
+    border-radius: 15px;
+    background-color: white;
+}
+
+#progressText p {
+    font-size: 1.25em;
+}
+
 /* Footer */
 
 #pageFoot {

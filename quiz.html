@@ -17,34 +17,34 @@
 
 <body>
     <header id="pageHead">
-        <div id="titleBar">
-            <span class="titleContainer">
-                <i class="fa-solid fa-earth-africa titleIcon"></i>
-            </span>
-            <span class="titleContainer" id="titleText">
-                <h1>History Quiz of the World</h1>
-                <p>A general knowledge quiz for the discerning history buff!</p>
-            </span>
-            <span class="titleContainer">
-                <i class="fa-solid fa-book-atlas titleIcon"></i>
-            </span>
-        </div>
-        <div id="audioBar">
-            <div class="audioContainer">
-                <h4>Music</h4>
-                <label class="audioSwitch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+            <div id="titleBar">
+                <span class="titleContainer">
+                    <i class="fa-solid fa-earth-africa titleIcon"></i>
+                </span>
+                <span class="titleContainer" id="titleText">
+                    <h1>History Quiz of the World</h1>
+                    <p>A general knowledge quiz for the discerning history buff!</p>
+                </span>
+                <span class="titleContainer">
+                    <i class="fa-solid fa-book-atlas titleIcon"></i>
+                </span>
             </div>
-            <div class="audioContainer">
-                <h4>Sounds</h4>
-                <label class="audioSwitch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+            <div id="audioBar">
+                <div class="audioContainer">
+                    <h4>Music</h4>
+                    <label class="audioSwitch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="audioContainer">
+                    <h4>Sounds</h4>
+                    <label class="audioSwitch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
-        </div>
     </header>
     <section id="heroImage">
         <div class="container quiz">
@@ -57,8 +57,26 @@
                 <button class="btn hard">Hard</button>
             </div>
         </div>
+        <div class="container progress">
+            <div id="progressBorder">
+                <div id="progressBar"></div>
+            </div>
+            <div id="progressText">
+                <p>You have answered X out of Y questions</p>
+            </div>
+        </div>
     </section>
-    <footer>Social Media links</footer>
+    <footer id="pageFoot">
+        <a href="https://www.facebook.com" target="_blank" class="linkSocial">
+            <i class="fa-brands fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="linkSocial">
+            <i class="fa-brands fa-instagram-square"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="linkSocial">
+            <i class="fa-brands fa-twitter-square"></i>
+        </a>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 
