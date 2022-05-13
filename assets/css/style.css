@@ -246,7 +246,7 @@ input:checked+.slider:before {
     height: 30px;
     line-height: 30px;
     border: solid 1px #79081c;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: white;
 }
 
@@ -282,6 +282,19 @@ input:checked+.slider:before {
         top: 15px;
     }
 
+    .quiz {
+        top: 50px;
+        height: 475px;
+    }
+
+    .text {
+        top: 30px;
+        height: 275px;
+    }
+
+    .progress {
+        top: 75px;
+    }
 }
 
 /* For screens 950px or below */
@@ -350,6 +363,10 @@ input:checked+.slider:before {
 
     #pageFoot {
         justify-content: center;
+    }
+
+    .progress {
+        width: 80%;
     }
 }
 
@@ -420,5 +437,17 @@ input:checked+.slider:before {
         width: 85px;
         margin: 15px 5px;
         font-size: 1.15em;
+    }
+
+    .progress {
+        width: 100%;
+    }
+
+    #progressBorder {
+        width: 90%;
+    }
+
+    #progressText p {
+        font-size: 0.75em;
     }
 }
