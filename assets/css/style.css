@@ -309,6 +309,10 @@ input:checked+.slider:before {
         top: 15px;
     }
 
+    #navContainer {
+        top: 35px;
+    }
+
     .quiz {
         top: 50px;
         min-height: 475px;
@@ -333,7 +337,7 @@ input:checked+.slider:before {
     }
 
     #titleBar {
-        min-height: 85px;
+        height: 60%;
     }
 
     .titleContainer i {
@@ -367,6 +371,15 @@ input:checked+.slider:before {
         height: 20px;
         width: 20px;
     }
+
+    #navContainer {
+        top: 85px;
+    }
+
+    #navContainer a {
+        font-size: 1.5em;
+    }
+
 
     #heroImage {
         background-image: url(../images/history_background_mobile.jpeg);
@@ -444,6 +457,16 @@ input:checked+.slider:before {
         height: 12px;
         width: 12px;
     }
+
+    #navContainer {
+        top: 115px;
+        left: 7px;
+    }
+
+    #navContainer a {
+        font-size: 0.85em;
+    }
+
 
     #heroImage {
         background-image: url(../images/history_background_mobile.jpeg);
