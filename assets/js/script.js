@@ -1,3 +1,5 @@
+//JS code for the audio play and control functions
+
 // Function to toggle background music
 
 let backgroundSlider = document.getElementById('backgroundSlider');
@@ -24,13 +26,42 @@ soundsSlider.addEventListener('click', function () {
     }
 });
 
-// Plays sound when user clicks their answer
+// Plays sound when user clicks an answer
 
 let btns = document.getElementsByClassName('option');
 
 for (i of btns) {
-    i.addEventListener ('click', function() {
+    i.addEventListener('click', function () {
         answerSound.play();
     });
 }
 
+// JS code for quiz section
+
+function startQuiz () {
+
+};
+
+function createQuizArray () {
+
+};
+
+function sortQuizArray () {
+
+};
+
+function showQuestion () {
+
+};
+
+function showOptions () {
+
+};
+
+function checkAnswer () {
+
+};
+
+function showAnswer () {
+
+};

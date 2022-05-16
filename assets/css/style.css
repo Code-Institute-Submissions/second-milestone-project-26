@@ -188,6 +188,16 @@ input:checked+.slider:before {
     padding: 10px 15px;
     border: solid 1px #79081c;
     background-color: white;
+    text-align: center;
+}
+
+.text h3 {
+    font-size: 2em;
+    border-radius: 15px;
+    padding: 10px 15px;
+    border: solid 1px #79081c;
+    background-color: white;
+    text-align: center;
 }
 
 .button {
