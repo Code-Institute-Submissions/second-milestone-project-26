@@ -65,3 +65,44 @@ function checkAnswer () {
 function showAnswer () {
 
 };
+
+//Questions List - Easy
+
+const easyQuestionList = [
+    {
+        question:"Dummy question 1",
+        answers: {
+            a: 'Dummy answer 1a',
+            b: 'Dummy answer 1b',
+            c: 'Dummy answer 1c'
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question:"Dummy question 2",
+        answers: {
+            a: 'Dummy answer 2a',
+            b: 'Dummy answer 2b',
+            c: 'Dummy answer 2c'
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question:"Dummy question 3",
+        answers: {
+            a: 'Dummy answer 3a',
+            b: 'Dummy answer 3b',
+            c: 'Dummy answer 3c'
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question:"Dummy question 4",
+        answers: {
+            a: 'Dummy answer 4a',
+            b: 'Dummy answer 4b',
+            c: 'Dummy answer 4c'
+        },
+        correctAnswer: 'c'
+    }
+];
