@@ -40,6 +40,7 @@ for (i of btns) {
 
 document.addEventListener('DOMContentLoaded', function() {
     shuffleQuizList();
+    createQuizArray();
 });
 
 function startQuiz () {
@@ -53,11 +54,13 @@ function shuffleQuizList () {
         easyQuestionList[i] = easyQuestionList[j]
         easyQuestionList[j] = k
     }
-    console.log('List shuffled');
 };
 
 function createQuizArray () {
-
+    let newQuestionList = [];
+    let i = easyQuestionList.slice(0, 2);
+    newQuestionList = i
+    console.log(newQuestionList);
 };
 
 function showQuestion () {
