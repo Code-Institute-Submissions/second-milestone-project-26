@@ -38,16 +38,17 @@ for (i of btns) {
 
 // JS code for quiz section
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     shuffleQuizList();
     createQuizArray();
+    showQuestion();
 });
 
-function startQuiz () {
+function startQuiz() {
 
 };
 
-function shuffleQuizList () {
+function shuffleQuizList() {
     for (let i = easyQuestionList.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i)
         let k = easyQuestionList[i]
@@ -56,34 +57,39 @@ function shuffleQuizList () {
     }
 };
 
-function createQuizArray () {
-    let newQuestionList = [];
+function createQuizArray() {
     let i = easyQuestionList.slice(0, 2);
     newQuestionList = i
     console.log(newQuestionList);
 };
 
-function showQuestion () {
+function showQuestion() {
+    let questionBox = document.getElementById('textContent');
+    for (let i = 0; i < newQuestionList.length - 1; i++) {
+        questionBox.innerHTML = `<p>${newQuestionList[i].question}</p>`;
+    };
+};
+
+function showOptions() {
 
 };
 
-function showOptions () {
+function checkAnswer() {
 
 };
 
-function checkAnswer () {
+function showAnswer() {
 
 };
 
-function showAnswer () {
+// Variables
 
-};
+let newQuestionList = [];
 
 //Questions List - Easy
 
-const easyQuestionList = [
-    {
-        question:"Dummy question 1",
+const easyQuestionList = [{
+        question: "Dummy question 1",
         answers: {
             a: 'Dummy answer 1a',
             b: 'Dummy answer 1b',
@@ -92,7 +98,7 @@ const easyQuestionList = [
         correctAnswer: 'b'
     },
     {
-        question:"Dummy question 2",
+        question: "Dummy question 2",
         answers: {
             a: 'Dummy answer 2a',
             b: 'Dummy answer 2b',
@@ -101,7 +107,7 @@ const easyQuestionList = [
         correctAnswer: 'b'
     },
     {
-        question:"Dummy question 3",
+        question: "Dummy question 3",
         answers: {
             a: 'Dummy answer 3a',
             b: 'Dummy answer 3b',
@@ -110,7 +116,7 @@ const easyQuestionList = [
         correctAnswer: 'a'
     },
     {
-        question:"Dummy question 4",
+        question: "Dummy question 4",
         answers: {
             a: 'Dummy answer 4a',
             b: 'Dummy answer 4b',
