@@ -38,15 +38,25 @@ for (i of btns) {
 
 // JS code for quiz section
 
+document.addEventListener('DOMContentLoaded', function() {
+    shuffleQuizList();
+});
+
 function startQuiz () {
 
 };
 
-function createQuizArray () {
-
+function shuffleQuizList () {
+    for (let i = easyQuestionList.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i)
+        let k = easyQuestionList[i]
+        easyQuestionList[i] = easyQuestionList[j]
+        easyQuestionList[j] = k
+    }
+    console.log('List shuffled');
 };
 
-function sortQuizArray () {
+function createQuizArray () {
 
 };
 
