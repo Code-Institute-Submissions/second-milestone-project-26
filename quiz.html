@@ -35,7 +35,7 @@
         <div id="audioBar">
             <div class="audioContainer">
                 <h4>Music</h4>
-                <audio id="backgroundMusic" loop>
+                <audio id="backgroundMusic" loop="true">
                     <source src="assets/audio/tape-star.mp3" type="audio/mpeg">
                 </audio>
                 <label class="audioSwitch">
@@ -46,7 +46,7 @@
             <div class="audioContainer">
                 <h4>Sounds</h4>
                 <audio id="answerSound" muted="true">
-                    <source src="assets/audio/questionanswer.mp3" type="audio/mpeg">
+                    <source src="assets/audio/questionanswer.mp3" type="audio/mpeg" autoplay>
                 </audio>
                 <label class="audioSwitch">
                     <input type="checkbox">
@@ -63,19 +63,19 @@
     <section id="heroImage">
         <!--Quiz Container-->
         <div class="container quiz">
-            <div id="textContent" class="container text">
-                <p>Questions and Answers go here!</p>
+            <div class="container text">
+                <p id="text-content">Questions and Answers go here!</p>
             </div>
             <!--Buttons-->
             <div class="container button">
                 <button id="op1" class="btn option">
-                    <p>Option One</p>
+                    Option One
                 </button>
                 <button id="op2" class="btn option">
-                    <p>Option Two</p>
+                    Option Two
                 </button>
                 <button id="op3" class="btn option">
-                    <p>Option Three</p>
+                    Option Three
                 </button>
             </div>
         </div>
@@ -85,7 +85,9 @@
                 <div id="progressBar"></div>
             </div>
             <div id="progressText">
-                <p>You have answered X out of Y questions</p>
+                <span>You have answered</span>
+                <span id="user-progress">0</span>
+                <span>out of 10 questions</span>
             </div>
         </div>
     </section>

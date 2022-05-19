@@ -182,7 +182,7 @@ input:checked+.slider:before {
     align-items: center;
 }
 
-.text p {
+#text-content {
     font-size: 1.15em;
     border-radius: 15px;
     padding: 10px 15px;
@@ -220,7 +220,7 @@ input:checked+.slider:before {
     font-weight: 700;
 }
 
-.btn p, .btn a {
+.btn, .btn a {
     font-size: 1.25vw;
     text-decoration: none;
     color: black;
@@ -285,10 +285,18 @@ input:checked+.slider:before {
     border: solid 1px #79081c;
     border-radius: 10px;
     background-color: white;
+    font-size: 1.25em;
 }
 
-#progressText p {
-    font-size: 1.25em;
+/* selectors for Js to assign */
+
+.correct {
+    background-color: rgba(73,75,35,1);
+    color: white;
+}
+
+.incorrect {
+    background-color: #c80000;
 }
 
 /* Footer */
