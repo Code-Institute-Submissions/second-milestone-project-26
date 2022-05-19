@@ -143,7 +143,7 @@ choices.forEach(choice => {
         setTimeout(function () {
             selectedChoice.classList.remove(classToApply);
             getNewQuestion();
-        }, 1500);
+        }, 2000);
     })
 });
 

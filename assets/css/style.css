@@ -326,7 +326,7 @@ input:checked+.slider:before {
 
 /* Media queries */
 
-/*For screens 1100px or below */
+/*For screens 1100px wide or below */
 
 @media screen and (max-width: 1100px) {
 
@@ -353,7 +353,7 @@ input:checked+.slider:before {
     }
 }
 
-/* For screens 950px or below */
+/* For screens 950px wide or below */
 
 @media screen and (max-width: 950px) {
 
@@ -426,8 +426,8 @@ input:checked+.slider:before {
         top: 50px;
     }
 
-    .btn p, .btn a {
-        font-size: 1.5vw;
+    .btn, .btn a {
+        font-size: 2vw;
         text-decoration: none;
         color: black;
     }
@@ -442,7 +442,7 @@ input:checked+.slider:before {
 
 }
 
-/* For screens below 450 pixels */
+/* For screens 450 pixels wide or below*/
 
 @media screen and (max-width: 450px) {
 
@@ -520,8 +520,8 @@ input:checked+.slider:before {
         margin: 10px 1px;
     }
 
-    .btn p, .btn a {
-        font-size: 2.5vw;
+    .btn, .btn a {
+        font-size: 3vw;
         text-decoration: none;
         color: black;
     }
@@ -538,3 +538,32 @@ input:checked+.slider:before {
         font-size: 0.75em;
     }
 }
+
+/* For screens 800px tall or below */
+
+@media screen and (max-height: 800px) {
+    
+    .quiz {
+        top: 15px;
+        min-height: 350px;
+    }
+
+    .text {
+        top: 15px;
+        min-height: 215px;
+    }
+
+    .button {
+        top: 20px;
+        min-height: 80px;
+    }
+
+    .btn {
+        min-height: 80px;
+    }
+
+    .progress {
+        top: 30px;
+    }
+}
+
