@@ -1,108 +1,197 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# History Quiz of the World
 
-Welcome Miles-Cownie,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive design]()
 
-## Gitpod Reminders
+[Deployed Site]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Contents
 
-`python3 -m http.server`
+* [**User Experience**](<#user-experience>)
+  * [Wireframes](<#wireframes>)
+  * [Site Structure](<#site-structure>)
+  * [Design Choices](<#design-choices>)
+    * [Fonts](<#fonts>)
+    * [Colour](<#colour>)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+* [**Existing Features**](<#existing-features>)
+  *
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* [**Desired Features**](<#desired-features>)
 
-A blue button should appear to click: _Make Public_,
+* [**Technologies Used**](<#technologies-used>)
 
-Another blue button should appear to click: _Open Browser_.
+* [**Testing**](<#testing>)
+  * [Code Validation](<#code-validation>)
+  * [Responsive Design Check](<#responsive-design-check>)
+  * [Browser Compatibility](<#browser-compatibility>)
+  * [Known Bugs](<#known-bugs>)
+    * [Resolved](<#resolved>)
+    * [Unresolved](<#unresolved>)
+  * [Lighthouse](<#lighthouse>)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [**Deployment**](<#deployment>)
+  * [To deploy the project](<#to-deploy-the-project>)
+  * [To fork the repository](<#to-fork-the-repository>)
+  * [To create a local clone](<#to-create-a-local-clone>)
 
-To log into the Heroku toolbelt CLI:
+* [**Credits**](<#credits>)
+  * [Content](<#content>)
+  * [Media](<#media>)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# User Experience
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Wireframes
 
-------
 
-## Release History
+[Back to top](<#contents>)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Site Structure
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[Back to top](<#contents>)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Design Choices
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* ### Fonts
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+[Back to top](<#contents>)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* ### Colour
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+[Back to top](<#contents>)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Existing Features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+##
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[Back to top](<#contents>)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# Desired Features
 
-------
+- 
 
-## FAQ about the uptime script
+[Back to top](<#contents>)
 
-**Why have you added this script?**
+# Technologies Used
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* [HTML5](https://html.com/html5/) - Provides content structure to the site.
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Adds style and responsive design to the site.
+* [JavaScript]() - Adds interactivity to the website.
+* [Balsamiq](https://balsamiq.com/wireframes/) - Design and build wireframes for the site.
+* [Github](https://github.com) - Acts as a repository for the site's code.
+* [Gitpod](https://www.gitpod.io) - Builds and edits the code for the site.
 
-**How will this affect me?**
+[Back to top](<#contents>)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+# Testing
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Code Validation
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+[Back to top](<#contents>)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* 
 
-**Can I opt out?**
+![W3C Validator test result]()
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+The CSS validator results are below:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![CSS Validator test result]()
 
-**Anything more?**
+The JS validator results are below:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![JS Validator test result]()
 
----
+[Back to top](<#contents>)
 
-Happy coding!
+## Responsive Design Check
+
+* 
+
+[Back to top](<#contents>)
+
+## Browser Compatibility
+
+
+[Back to top](<#contents>)
+
+## Known Bugs
+* ### Resolved
+
+  *
+
+* ### Unresolved
+
+  *
+
+[Back to top](<#contents>)
+
+## Lighthouse
+
+ was tested using the [Lighthouse](https://developers.google.com/web/tools/lighthouse) dev tool program to test the pages for:
+* Performance - How the pages run whilst loading.
+* Accessibility - Checking how the site is accessible for users.
+* Best Practices - Making sure the site fits with industry best practices.
+* Seo - Search engine optimisation. Does the site run well with search engine results?
+
+As an example, the results for the Home Page are as follows:
+
+![Lighthouse home results]()
+
+[Back to top](<#contents>)
+
+## Deployment
+
+### **To deploy the project**
+This site was deployed using the Github Pages platform. To deploy a site with Pages one must:
+ 1. In Github's repository, navigate to the **Settings** tab.
+ 2. Once in the Settings, move to the **Pages** tab in the left-hand navigation column.
+ 3. Under the **Branch** selector, select the **main** option and the **root** folder, then click **save**.
+ 4. The site will automatically deploy and a green complete banner will indicate success.
+
+ ![Deployment success]()
+
+### **To fork the repository**
+ A copy of the page can be done through forking the Github account. This copy can be viewed and changed without modifying the original. To fork the repository one must:
+  1. Log in to **GitHub** and locate the [repository](https://github.com/Miles-Cownie/first-milestone-project)
+  2. Select the **fork** option in the top right hand corner of the page to create a copy of the repository.
+
+  ![Fork button]()
+
+### **To create a local clone**
+
+  1. Select the **code** tab from the repository's navigation bar.
+  2. Choose the **clone** option in the secondary navigation bar and copy the url provided.
+  3. In your IDE of your choice open **Git Bash**
+  4. Change the current working directory to the location where you want the cloned directory to be made.
+  5. Type **git clone**, and then paste the URL copied from GitHub.
+  6. Confirm the choice and the local clone will be created.
+
+  ![Clone Action]()
+
+  [Back to top](<#contents>)
+
+# Credits
+
+### Content
+
+
+[Back to top](<#contents>)
+
+### Media
+
+
+[Back to top](<#contents>)
+
+# Acknowledgements
+The site was completed as Portfolio Project 2 for the Diploma in Software Development (E-commerce Applications) with the [Code Institute](https://codeinstitute.net). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support. Thank you to my friends and family who helped me test the site.
+
+Miles Cownie 2022.
+
+[Back to top](<#contents>)
