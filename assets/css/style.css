@@ -229,6 +229,7 @@ input:checked+.slider:before {
 .btn:hover {
     color: #79081c;
     background-color: white;
+    cursor: pointer;
 }
 
 .easy {
@@ -257,7 +258,7 @@ input:checked+.slider:before {
     border: none;
 }
 
-#progressBorder {
+#progress-border {
     width: 80%;
     display: block;
     margin-right: auto;
@@ -266,16 +267,17 @@ input:checked+.slider:before {
     border: solid 2px #79081c;
     border-radius: 15px;
     background-color: rgba(73, 75, 35, 0.9);
+    overflow: hidden;
 }
 
-#progressBar {
+#progress-bar {
     width: 2%;
     height: 40px;
     background-color: #79081c;
     border-radius: 15px;
 }
 
-#progressText {
+#progress-text {
     display: block;
     margin: 10px auto;
     padding: 0 15px;
@@ -288,15 +290,20 @@ input:checked+.slider:before {
     font-size: 1.25em;
 }
 
-/* selectors for Js to assign */
+/* selectors for JS to assign */
 
-.correct {
+.correct, .correct:hover {
     background-color: rgba(73,75,35,1);
     color: white;
 }
 
-.incorrect {
+.incorrect, .incorrect:hover {
     background-color: #c80000;
+    color: white;
+}
+
+.return {
+    font-weight: bold;
 }
 
 /* Footer */

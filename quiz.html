@@ -40,7 +40,7 @@
                 </audio>
                 <label class="audioSwitch">
                     <input type="checkbox">
-                    <span id="backgroundSlider" class="slider"></span>
+                    <span id="background-slider" class="slider"></span>
                 </label>
             </div>
             <div class="audioContainer">
@@ -50,7 +50,7 @@
                 </audio>
                 <label class="audioSwitch">
                     <input type="checkbox">
-                    <span id="soundsSlider" class="slider"></span>
+                    <span id="sounds-slider" class="slider"></span>
                 </label>
             </div>
         </div>
@@ -68,26 +68,24 @@
             </div>
             <!--Buttons-->
             <div class="container button">
-                <button id="op1" class="btn option">
+                <button id="op1" class="btn option" data-number="1">
                     Option One
                 </button>
-                <button id="op2" class="btn option">
+                <button id="op2" class="btn option" data-number="2">
                     Option Two
                 </button>
-                <button id="op3" class="btn option">
+                <button id="op3" class="btn option" data-number="3">
                     Option Three
                 </button>
             </div>
         </div>
         <!--Progress Bar-->
         <div class="container progress">
-            <div id="progressBorder">
-                <div id="progressBar"></div>
+            <div id="progress-border">
+                <div id="progress-bar"></div>
             </div>
-            <div id="progressText">
-                <span>You have answered</span>
-                <span id="user-progress">0</span>
-                <span>out of 10 questions</span>
+            <div id="progress-text">
+                You have answered X out of 10 questions!
             </div>
         </div>
     </section>
