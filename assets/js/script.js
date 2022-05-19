@@ -95,6 +95,32 @@ function getNewQuestion() {
 }
 }
 
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        playSound();
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        if (classToApply === 'correct') {
+            score++;
+        }
+
+        selectedChoice.classList.add(classToApply);
+
+        setTimeout(function () {
+            selectedChoice.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1500);
+    })
+});
+
+startGame();
+
 // Functions to control background music and answer sounds
 
 function toggleMusic() {
