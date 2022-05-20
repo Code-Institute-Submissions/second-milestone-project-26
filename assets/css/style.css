@@ -306,6 +306,10 @@ input:checked+.slider:before {
     font-weight: bold;
 }
 
+.hide {
+    visibility: hidden;
+}
+
 /* Footer */
 
 #pageFoot {

@@ -6,6 +6,8 @@ const progressText = document.getElementById('progress-text');
 const progressBar = document.getElementById('progress-bar');
 const musicToggle = document.getElementById('background-slider');
 const soundToggle = document.getElementById('sounds-slider');
+const op1Btn = document.getElementById('op1');
+const op3Btn = document.getElementById('op3');
 const MAX_QUESTIONS = 5
 
 //Event listeners for music controls
@@ -89,6 +91,8 @@ function getNewQuestion() {
         choices.forEach(choice => {
             choice.innerHTML = `<a href="index.html" class="return">Try Again!</a>`
         })
+        op1Btn.classList.add('hide');
+        op3Btn.classList.add('hide');
     } else {
 
     // Code to execute until all questions are answered
