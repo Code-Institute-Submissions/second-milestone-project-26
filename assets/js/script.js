@@ -8,6 +8,7 @@ const musicToggle = document.getElementById('background-slider');
 const soundToggle = document.getElementById('sounds-slider');
 const op1Btn = document.getElementById('op1');
 const op3Btn = document.getElementById('op3');
+const difficulty = document.getElementById('difficulty');
 const MAX_QUESTIONS = 5
 
 //Event listeners for music controls
@@ -22,6 +23,7 @@ soundToggle.addEventListener('click', function () {
 
 // Variables for the quiz functions
 
+let level = 0;
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
@@ -30,7 +32,7 @@ let availableQuestions = [];
 
 // Easy Question Roster - Currently Dummy
 
-let questions = [{
+let easyQuestions = [{
         question: 'Dummy Q A',
         choice1: 'A1',
         choice2: 'A2',
@@ -77,8 +79,20 @@ let questions = [{
 function startGame() {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
+    level = difficulty.dataset.number;
+    if (level === '1') {
+        availableQuestions = [...easyQuestions];
+        getNewQuestion();
+    } else if (level === '2') {
+        availableQuestions = [...mediumQuestions];
+        getNewQuestion();
+    } else if (level === '3') {
+        availableQuestions = [...hardQuestions];
+        getNewQuestion();
+    } else {
+        let url = 'https://youtu.be/dQw4w9WgXcQ';
+        window.open(url, '_blank');
+    }
 }
 
 // Move to next question function
@@ -95,31 +109,31 @@ function getNewQuestion() {
         op3Btn.classList.add('hide');
     } else {
 
-    // Code to execute until all questions are answered
+        // Code to execute until all questions are answered
 
-    // Increments the question counter and updates progress bar
-    questionCounter++;
-    progressText.innerText = `You are on question ${questionCounter} out of ${MAX_QUESTIONS}`;
-    progressBar.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+        // Increments the question counter and updates progress bar
+        questionCounter++;
+        progressText.innerText = `You are on question ${questionCounter} out of ${MAX_QUESTIONS}`;
+        progressBar.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
-    // Randomises the question list
+        // Randomises the question list
 
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+        const questionIndex = Math.floor(Math.random() * availableQuestions.length);
 
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+        currentQuestion = availableQuestions[questionIndex];
+        question.innerText = currentQuestion.question;
 
-    // Applies answer choices to the option buttons
+        // Applies answer choices to the option buttons
 
-    choices.forEach(choice => {
-        const number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number]
-    })
+        choices.forEach(choice => {
+            const number = choice.dataset['number']
+            choice.innerText = currentQuestion['choice' + number]
+        })
 
-    availableQuestions.splice(questionIndex, 1);
+        availableQuestions.splice(questionIndex, 1);
 
-    acceptingAnswers = true;
-}
+        acceptingAnswers = true;
+    }
 }
 
 // Adds event listeners to the option buttons
@@ -128,7 +142,7 @@ choices.forEach(choice => {
     choice.addEventListener('click', e => {
         playSound();
         if (!acceptingAnswers) return;
-// Checks if selected answer is correct
+        // Checks if selected answer is correct
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
@@ -141,7 +155,7 @@ choices.forEach(choice => {
         } else if (classToApply !== 'correct') {
             question.innerText = `Afraid not! the correct answer was ${currentQuestion.answerText}`;
         }
-// Applies correct or incorrect class to the selected option
+        // Applies correct or incorrect class to the selected option
         selectedChoice.classList.add(classToApply);
 
         setTimeout(function () {
