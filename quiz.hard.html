@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <!-- Page Heading-->
+    <!--Page Heading-->
     <header id="pageHead">
         <!--Title-->
         <div id="titleBar">
@@ -31,56 +31,65 @@
                 <i class="fa-solid fa-book-atlas titleIcon"></i>
             </span>
         </div>
-        <!--Audio controls-->
+        <!--Audio Controls-->
         <div id="audioBar">
             <div class="audioContainer">
                 <h4>Music</h4>
-                <audio id="backgroundMusic" loop>
+                <audio id="backgroundMusic" loop="true">
                     <source src="assets/audio/tape-star.mp3" type="audio/mpeg">
                 </audio>
                 <label class="audioSwitch">
                     <input type="checkbox">
-                    <span id="backgroundSlider" class="slider"></span>
+                    <span id="background-slider" class="slider"></span>
                 </label>
             </div>
             <div class="audioContainer">
                 <h4>Sounds</h4>
                 <audio id="answerSound" muted="true">
-                    <source src="assets/audio/questionanswer.mp3" type="audio/mpeg">
+                    <source src="assets/audio/questionanswer.mp3" type="audio/mpeg" autoplay>
                 </audio>
                 <label class="audioSwitch">
                     <input type="checkbox">
-                    <span id="soundsSlider" class="slider"></span>
+                    <span id="sounds-slider" class="slider"></span>
                 </label>
             </div>
-            <!--Navigation Link-->
         </div>
+        <!--Navigation-->
         <div id="navContainer">
             <a href="index.html">Home</a>
         </div>
     </header>
     <!--Main Page-->
     <section id="heroImage">
-        <!--Quiz Game Container-->
-        <div class="container quiz">
+        <!--Quiz Container-->
+        <div class="container quiz" id="difficulty" data-number="3">
             <div class="container text">
-                <h3>Choose you difficulty!</h3>
+                <p id="text-content">Questions and Answers go here!</p>
             </div>
             <!--Buttons-->
             <div class="container button">
-                <button data-type="easy" class="btn easy">
-                    <a href="quiz-easy.html">Easy</a>
+                <button id="op1" class="btn option" data-number="1">
+                    Option One
                 </button>
-                <button data-type="medium" class="btn medium">
-                    <a href="quiz-med.html">Medium</a>
+                <button id="op2" class="btn option" data-number="2">
+                    Option Two
                 </button>
-                <button data-type="hard" class="btn hard">
-                    <a href="quiz-hard.html">Hard</a>
+                <button id="op3" class="btn option" data-number="3">
+                    Option Three
                 </button>
             </div>
         </div>
+        <!--Progress Bar-->
+        <div class="container progress">
+            <div id="progress-border">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="progress-text">
+                You have answered X out of 10 questions!
+            </div>
+        </div>
     </section>
-    <!--Page Footer-->
+    <!--Footer-->
     <footer id="pageFoot">
         <a href="https://www.facebook.com" target="_blank" class="linkSocial">
             <i class="fa-brands fa-facebook-square"></i>
@@ -92,7 +101,6 @@
             <i class="fa-brands fa-twitter-square"></i>
         </a>
     </footer>
-    <!--Javascript link-->
     <script src="assets/js/script.js"></script>
 </body>
 
