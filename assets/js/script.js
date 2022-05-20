@@ -74,6 +74,94 @@ let easyQuestions = [{
     }
 ]
 
+// Medium Question Roster - Currently Dummy
+
+let mediumQuestions = [{
+    question: 'Dummy Q A',
+    choice1: 'A1',
+    choice2: 'A2',
+    choice3: 'A3',
+    answer: 2,
+    answerText: 'A2'
+},
+{
+    question: 'Dummy Q B',
+    choice1: 'B1',
+    choice2: 'B2',
+    choice3: 'B3',
+    answer: 3,
+    answerText: 'B3'
+},
+{
+    question: 'Dummy Q C',
+    choice1: 'C1',
+    choice2: 'C2',
+    choice3: 'C3',
+    answer: 1,
+    answerText: 'C1'
+},
+{
+    question: 'Dummy Q D',
+    choice1: 'D1',
+    choice2: 'D2',
+    choice3: 'D3',
+    answer: 2,
+    answerText: 'D2'
+},
+{
+    question: 'Dummy Q E',
+    choice1: 'E1',
+    choice2: 'E2',
+    choice3: 'E3',
+    answer: 3,
+    answerText: 'E3'
+}
+]
+
+// Hard Question Roster - Currently Dummy
+
+let hardQuestions = [{
+    question: 'Dummy Q A',
+    choice1: 'A1',
+    choice2: 'A2',
+    choice3: 'A3',
+    answer: 2,
+    answerText: 'A2'
+},
+{
+    question: 'Dummy Q B',
+    choice1: 'B1',
+    choice2: 'B2',
+    choice3: 'B3',
+    answer: 3,
+    answerText: 'B3'
+},
+{
+    question: 'Dummy Q C',
+    choice1: 'C1',
+    choice2: 'C2',
+    choice3: 'C3',
+    answer: 1,
+    answerText: 'C1'
+},
+{
+    question: 'Dummy Q D',
+    choice1: 'D1',
+    choice2: 'D2',
+    choice3: 'D3',
+    answer: 2,
+    answerText: 'D2'
+},
+{
+    question: 'Dummy Q E',
+    choice1: 'E1',
+    choice2: 'E2',
+    choice3: 'E3',
+    answer: 3,
+    answerText: 'E3'
+}
+]
+
 // Start Game Function
 
 function startGame() {
