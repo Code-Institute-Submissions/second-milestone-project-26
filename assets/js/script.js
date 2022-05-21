@@ -9,7 +9,7 @@ const soundToggle = document.getElementById('sounds-slider');
 const op1Btn = document.getElementById('op1');
 const op3Btn = document.getElementById('op3');
 const difficulty = document.getElementById('difficulty');
-const MAX_QUESTIONS = 5
+const maxQuestions = 10
 
 //Event listeners for music controls
 
@@ -30,135 +30,735 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-// Easy Question Roster - Currently Dummy
+// Easy Question Roster
 
 let easyQuestions = [{
-        question: 'Dummy Q A',
-        choice1: 'A1',
-        choice2: 'A2',
-        choice3: 'A3',
-        answer: 2,
-        answerText: 'A2'
-    },
-    {
-        question: 'Dummy Q B',
-        choice1: 'B1',
-        choice2: 'B2',
-        choice3: 'B3',
-        answer: 3,
-        answerText: 'B3'
-    },
-    {
-        question: 'Dummy Q C',
-        choice1: 'C1',
-        choice2: 'C2',
-        choice3: 'C3',
+        question: 'Who fought at the Battle of Actium in 31BC?',
+        choice1: 'Octavian vs Mark Anthony and Cleopatra',
+        choice2: 'Julius Caesar and Mark Anthony vs Cleopatra',
+        choice3: 'Julius Caesar vs Cleopatra and Mark Antony',
         answer: 1,
-        answerText: 'C1'
+        answerText: 'Octavian vs Mark Anthony and Cleopatra'
     },
     {
-        question: 'Dummy Q D',
-        choice1: 'D1',
-        choice2: 'D2',
-        choice3: 'D3',
+        question: 'What is the name of the Native American woman who helped the Lewis and Clark Expedition?',
+        choice1: 'Zitkala-Sa',
+        choice2: 'Sacagawea',
+        choice3: 'Pocahontas',
         answer: 2,
-        answerText: 'D2'
+        answerText: 'Sacagawea'
     },
     {
-        question: 'Dummy Q E',
-        choice1: 'E1',
-        choice2: 'E2',
-        choice3: 'E3',
+        question: 'What was Christopher Columbus looking for when he discovered America?',
+        choice1: 'El Dorado',
+        choice2: 'Proof of sea monsters',
+        choice3: 'Passage to Asia',
         answer: 3,
-        answerText: 'E3'
+        answerText: 'Passage to Asia'
+    },
+    {
+        question: "Who was the founder of the Women's Social and Political Union, which was established to fight for women's suffrage in Britain?",
+        choice1: 'Emmeline Pankhurst',
+        choice2: 'Emily Wilding Davison',
+        choice3: 'Constance Bryer',
+        answer: 1,
+        answerText: 'Emmeline Pankhurst'
+    },
+    {
+        question: 'In what year did the Battle of Hastings take place?',
+        choice1: '1036',
+        choice2: '1066',
+        choice3: '1096',
+        answer: 2,
+        answerText: '1066'
+    },
+    {
+        question: 'Which two English counties fought against each other in the War of the Roses?',
+        choice1: 'Hertfordshire and Bedfordshire',
+        choice2: 'Yorkshire and Gloucestershire',
+        choice3: 'Yorkshire and Lancashire',
+        answer: 3,
+        answerText: 'Yorkshire and Lancashire'
+    },
+    {
+        question: 'During the War of the Roses, which other conflict broke out?',
+        choice1: 'The One Hundred Years War',
+        choice2: 'The Pretenders War',
+        choice3: 'The French and Indian War',
+        answer: 1,
+        answerText: 'The One Hundred Years War'
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
     }
 ]
 
-// Medium Question Roster - Currently Dummy
+// Medium Question Roster
 
 let mediumQuestions = [{
-    question: 'Dummy Q A',
-    choice1: 'A1',
-    choice2: 'A2',
-    choice3: 'A3',
-    answer: 2,
-    answerText: 'A2'
-},
-{
-    question: 'Dummy Q B',
-    choice1: 'B1',
-    choice2: 'B2',
-    choice3: 'B3',
-    answer: 3,
-    answerText: 'B3'
-},
-{
-    question: 'Dummy Q C',
-    choice1: 'C1',
-    choice2: 'C2',
-    choice3: 'C3',
-    answer: 1,
-    answerText: 'C1'
-},
-{
-    question: 'Dummy Q D',
-    choice1: 'D1',
-    choice2: 'D2',
-    choice3: 'D3',
-    answer: 2,
-    answerText: 'D2'
-},
-{
-    question: 'Dummy Q E',
-    choice1: 'E1',
-    choice2: 'E2',
-    choice3: 'E3',
-    answer: 3,
-    answerText: 'E3'
-}
+        question: 'What is the name of the woman-shaped columns which famously hold up the Erectheion on the Acropolis in Athens?',
+        choice1: 'Caryatids',
+        choice2: 'Atheneiids',
+        choice3: 'Caroliniads',
+        answer: 1,
+        answerText: 'Caryatids'
+    },
+    {
+        question: 'The Stonewall Riots of 1969 were important for establishing the rights of which community in the USA?',
+        choice1: 'African Americans',
+        choice2: 'LGBTQIA+',
+        choice3: 'Mexican immigrants',
+        answer: 2,
+        answerText: 'LGBTQIA+'
+    },
+    {
+        question: "Who was the founder of the Women's Social and Political Union, which was established to fight for women's suffrage in Britain?",
+        choice1: 'Constance Bryer',
+        choice2: 'Emily Wilding Davison',
+        choice3: 'Emmeline Pankhurst',
+        answer: 3,
+        answerText: 'Emmeline Pankhurst'
+    },
+    {
+        question: 'In which historical period did Leonardo da Vinci live?',
+        choice1: 'The Renaissance',
+        choice2: 'Middle Ages',
+        choice3: 'Victorian Era',
+        answer: 1,
+        answerText: 'The Renaissance'
+    },
+    {
+        question: "How long is the Roman fortification of Hadrian's Wall?",
+        choice1: '143 miles',
+        choice2: '73 miles',
+        choice3: '103 miles',
+        answer: 2,
+        answerText: '73 miles'
+    },
+    {
+        question: 'Why did the War of the Roses begin?',
+        choice1: "A marriage crisis where the king didn't marry who he was supposed to",
+        choice2: 'The murder of the true heir followed by a hostile takeover',
+        choice3: 'A succession crisis where the child of an heir took over from the king',
+        answer: 3,
+        answerText: 'A succession crisis where the child of an heir took over from the king'
+    },
+    {
+        question: 'Which French national hero was captured and executed by Richard of York?',
+        choice1: 'Joan of Arc',
+        choice2: 'Charles the Victorious',
+        choice3: 'John of Burgundy',
+        answer: 1,
+        answerText: 'Joan of Arc'
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 1,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 2,
+        answerText: ''
+    },
+    {
+        question: '',
+        choice1: '',
+        choice2: '',
+        choice3: '',
+        answer: 3,
+        answerText: ''
+    }
 ]
 
-// Hard Question Roster - Currently Dummy
+// Hard Question Roster
 
 let hardQuestions = [{
-    question: 'Dummy Q A',
-    choice1: 'A1',
-    choice2: 'A2',
-    choice3: 'A3',
-    answer: 2,
-    answerText: 'A2'
-},
-{
-    question: 'Dummy Q B',
-    choice1: 'B1',
-    choice2: 'B2',
-    choice3: 'B3',
-    answer: 3,
-    answerText: 'B3'
-},
-{
-    question: 'Dummy Q C',
-    choice1: 'C1',
-    choice2: 'C2',
-    choice3: 'C3',
+    question: 'Approximately how long did the Stone Age last?',
+    choice1: '2.5 million years',
+    choice2: '4.5 million years',
+    choice3: '3.5 million years',
     answer: 1,
-    answerText: 'C1'
+    answerText: '2.5 million years'
 },
 {
-    question: 'Dummy Q D',
-    choice1: 'D1',
-    choice2: 'D2',
-    choice3: 'D3',
+    question: 'During the War of the Roses, who became know for as the "Kingmaker" for his role in crowning two seperate kings during the conflict?',
+    choice1: 'Edward Plantagenet of Middlesex',
+    choice2: 'Richard Neville of Warwick',
+    choice3: 'Henry Welles of Salisbury ',
     answer: 2,
-    answerText: 'D2'
+    answerText: 'Richard Neville of Warwick'
 },
 {
-    question: 'Dummy Q E',
-    choice1: 'E1',
-    choice2: 'E2',
-    choice3: 'E3',
+    question: 'What is the first battle of the War of the Roses?',
+    choice1: 'Battle of Northampton',
+    choice2: 'Battle of Wakefield',
+    choice3: 'Battle of St. Albans',
     answer: 3,
-    answerText: 'E3'
+    answerText: 'Battle of St. Albans'
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: "",
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 1,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 2,
+    answerText: ''
+},
+{
+    question: '',
+    choice1: '',
+    choice2: '',
+    choice3: '',
+    answer: 3,
+    answerText: ''
 }
 ]
 
@@ -187,8 +787,8 @@ function startGame() {
 
 function getNewQuestion() {
     // Code to execute when the user has answered all the available questions
-    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        question.innerText = `Congratulations! You answered ${score} out of ${MAX_QUESTIONS} correctly!`;
+    if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
+        question.innerText = `Congratulations! You answered ${score} out of ${maxQuestions} correctly!`;
         progressText.innerText = `That's all the questions this time!`;
         choices.forEach(choice => {
             choice.innerHTML = `<a href="index.html" class="return">Try Again!</a>`
@@ -201,8 +801,8 @@ function getNewQuestion() {
 
         // Increments the question counter and updates progress bar
         questionCounter++;
-        progressText.innerText = `You are on question ${questionCounter} out of ${MAX_QUESTIONS}`;
-        progressBar.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+        progressText.innerText = `You are on question ${questionCounter} out of ${maxQuestions}`;
+        progressBar.style.width = `${(questionCounter/maxQuestions) * 100}%`
 
         // Randomises the question list
 
