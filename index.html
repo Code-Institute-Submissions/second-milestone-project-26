@@ -34,22 +34,22 @@
         <!--Audio controls-->
         <div id="audioBar">
             <div class="audioContainer">
-                <h4>Music</h4>
+                <p>Music</p>
                 <audio id="background-music" loop>
                     <source src="assets/audio/tape-star.mp3" type="audio/mpeg">
                 </audio>
                 <label class="audioSwitch">
-                    <input type="checkbox">
+                    <input type="checkbox" aria-label="music-toggle">
                     <span id="background-slider" class="slider"></span>
                 </label>
             </div>
             <div class="audioContainer">
-                <h4>Sounds</h4>
+                <p>Sounds</p>
                 <audio id="answer-sound" muted>
                     <source src="assets/audio/questionanswer.mp3" type="audio/mpeg">
                 </audio>
                 <label class="audioSwitch">
-                    <input type="checkbox">
+                    <input type="checkbox" aria-label="sound-toggle">
                     <span id="sounds-slider" class="slider"></span>
                 </label>
             </div>
@@ -82,13 +82,13 @@
     </div>
     <!--Page Footer-->
     <footer id="pageFoot">
-        <a href="https://www.facebook.com" target="_blank" class="linkSocial">
+        <a href="https://www.facebook.com" target="_blank" class="linkSocial" aria-label="Facebook">
             <i class="fa-brands fa-facebook-square"></i>
         </a>
-        <a href="https://www.instagram.com" target="_blank" class="linkSocial">
+        <a href="https://www.instagram.com" target="_blank" class="linkSocial" aria-label="Instagram">
             <i class="fa-brands fa-instagram-square"></i>
         </a>
-        <a href="https://twitter.com" target="_blank" class="linkSocial">
+        <a href="https://twitter.com" target="_blank" class="linkSocial" aria-label="Twitter">
             <i class="fa-brands fa-twitter-square"></i>
         </a>
     </footer>
