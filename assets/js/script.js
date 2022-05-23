@@ -787,7 +787,7 @@ function startGame() {
 
 function getNewQuestion() {
     // Code to execute when the user has answered all the available questions
-    if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
+    if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         question.innerText = `Congratulations! You answered ${score} out of ${maxQuestions} correctly!`;
         progressText.innerText = `That's all the questions this time!`;
         choices.forEach(choice => {
