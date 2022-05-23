@@ -1,10 +1,10 @@
 # History Quiz of the World
 
+This web based application is designed to be a fun and engaging history quiz. It is targeted at students and recreational historians to test their general knowledge on the history of the world.
 
+![Responsive design](assets/readme-images/responsive-image.png)
 
-![Responsive design]()
-
-[Deployed Site]()
+[Deployed Site](https://miles-cownie.github.io/second-milestone-project/)
 
 # Contents
 
@@ -45,24 +45,33 @@
 
 ## Wireframes
 
+Wireframes for History Quiz of the World were built using [Balsamiq](https://balsamiq.com). The design proposed a responsive title bar and main quiz container with three buttons. The buttons and titel bar were initially wireframed to stack on mobile screens. The quiz page of the application had an additional progress bar to track user progress through the quiz. A third page was wireframed to be the awards page for the user, where they would see thier score and be presented with options to try other difficulties of the quiz.
+
+![Wireframe Desktop Site](assets/readme-images/wireframe-desktop.png)
+
+![Wireframe Mobile Site](assets/readme-images/wireframe-mobile.png)
 
 [Back to top](<#contents>)
 
 ## Site Structure
 
-
+The website consists of four pages. The first page is the index page and contains links to the other three pages. The user is prompted to choose a difficulty through one of the links displayed in the main quiz container. The other pages each correspond to a difficulty the user can select. All pages have audio controls and a home navigation link in the heading. A footer with (dummy) social media links is also present.
 
 [Back to top](<#contents>)
 
 ## Design Choices
 
 * ### Fonts
-
+The font selected for this web application is Radio Canada to provide an open and friendly font for the user. This will fall back to sans serif if Radio Canada fails to load.
 
 [Back to top](<#contents>)
 
 * ### Colour
 
+The colour scheme used for the website is rgba(73, 75, 35, 0.9) (Olive Green) as a background, with #ff9e01 (Warm Yellow) as text to provide a warm display while maintaining contrast. A secondary background colour of #ff9e01 (Orange) highlights the quiz play area from the rest of the background. Borders are coloured with #79081c (Burgandy) to make clear divsions between containers for the user.
+The scheme was adopted from Color My Soul from [Pinterest](https://www.pinterest.co.uk/pin/308848486943717128/) to provide a consistent theme and clear contrast.
+
+![Colour Scheme](assets/readme-images/colour-scheme.png)
 
 [Back to top](<#contents>)
 
