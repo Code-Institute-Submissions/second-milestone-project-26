@@ -65,7 +65,7 @@ body {
     height: 40px;
 }
 
-.audioContainer h4 {
+.audioContainer p {
     font-size: 1em;
     color: #ff9e01;
     margin: 0 5px 0 5px;
@@ -478,7 +478,7 @@ input:checked+.slider:before {
         height: 50px;
     }
 
-    .audioContainer h4 {
+    .audioContainer p {
         font-size: 0.75em;
     }
 
