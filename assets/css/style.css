@@ -169,7 +169,7 @@ input:checked+.slider:before {
     top: 75px;
     width: 60%;
     min-height: 550px;
-    background-color: rgba(73,75,35,0.95);
+    background-color: rgba(73, 75, 35, 0.95);
 }
 
 .text {
@@ -218,17 +218,25 @@ input:checked+.slider:before {
     border: solid 1px #79081c;
     border-radius: 15px;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn, .btn a {
+.btn a {
     font-size: 1.25vw;
+    padding: 25px 35px;
     text-decoration: none;
     color: black;
 }
 
 .btn:hover {
-    color: #79081c;
     background-color: white;
+    cursor: pointer;
+}
+
+.btn a:hover {
+    color: #79081c;
     cursor: pointer;
 }
 
@@ -292,12 +300,14 @@ input:checked+.slider:before {
 
 /* selectors for JS to assign */
 
-.correct, .correct:hover {
-    background-color: rgba(73,75,35,1);
+.correct,
+.correct:hover {
+    background-color: rgba(73, 75, 35, 1);
     color: white;
 }
 
-.incorrect, .incorrect:hover {
+.incorrect,
+.incorrect:hover {
     background-color: #c80000;
     color: white;
 }
@@ -430,7 +440,8 @@ input:checked+.slider:before {
         top: 50px;
     }
 
-    .btn, .btn a {
+    .btn,
+    .btn a {
         font-size: 2vw;
         text-decoration: none;
         color: black;
@@ -524,8 +535,9 @@ input:checked+.slider:before {
         margin: 10px 1px;
     }
 
-    .btn, .btn a {
+    .btn a {
         font-size: 3vw;
+        padding: 20px;
         text-decoration: none;
         color: black;
     }
@@ -546,7 +558,7 @@ input:checked+.slider:before {
 /* For screens 800px tall or below */
 
 @media screen and (max-height: 800px) {
-    
+
     .quiz {
         top: 15px;
         min-height: 350px;
@@ -570,4 +582,3 @@ input:checked+.slider:before {
         top: 30px;
     }
 }
-
