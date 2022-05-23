@@ -9,17 +9,17 @@ const soundToggle = document.getElementById('sounds-slider');
 const op1Btn = document.getElementById('op1');
 const op3Btn = document.getElementById('op3');
 const difficulty = document.getElementById('difficulty');
-const maxQuestions = 10
+const maxQuestions = 10;
 
 //Event listeners for music controls
 
 musicToggle.addEventListener('click', function () {
     toggleMusic();
-})
+});
 
 soundToggle.addEventListener('click', function () {
     toggleSound();
-})
+});
 
 // Variables for the quiz functions
 
@@ -272,7 +272,7 @@ let easyQuestions = [{
         answer: 3,
         answerText: '1804'
     }
-]
+];
 
 // Medium Question Roster
 
@@ -516,7 +516,7 @@ let mediumQuestions = [{
         answer: 3,
         answerText: 'Haiti'
     }
-]
+];
 
 // Hard Question Roster
 
@@ -760,7 +760,7 @@ let hardQuestions = [{
     answer: 3,
     answerText: 'The United Kingdom'
 }
-]
+];
 
 // Start Game Function
 
@@ -790,8 +790,8 @@ function getNewQuestion() {
         question.innerText = `Congratulations! You answered ${score} out of ${maxQuestions} correctly!`;
         progressText.innerText = `That's all the questions this time!`;
         choices.forEach(choice => {
-            choice.innerHTML = `<a href="index.html" class="return">Try Again!</a>`
-        })
+            choice.innerHTML = `<a href="index.html" class="return">Try Again!</a>`;
+        });
         op1Btn.classList.add('hide');
         op3Btn.classList.add('hide');
     } else {
@@ -801,7 +801,7 @@ function getNewQuestion() {
         // Increments the question counter and updates progress bar
         questionCounter++;
         progressText.innerText = `You are on question ${questionCounter} out of ${maxQuestions}`;
-        progressBar.style.width = `${(questionCounter/maxQuestions) * 100}%`
+        progressBar.style.width = `${(questionCounter/maxQuestions) * 100}%`;
 
         // Randomises the question list
 
@@ -813,9 +813,9 @@ function getNewQuestion() {
         // Applies answer choices to the option buttons
 
         choices.forEach(choice => {
-            const number = choice.dataset['number']
-            choice.innerText = currentQuestion['choice' + number]
-        })
+            const number = choice.dataset.number;
+            choice.innerText = currentQuestion['choice' + number];
+        });
 
         availableQuestions.splice(questionIndex, 1);
 
@@ -832,7 +832,7 @@ choices.forEach(choice => {
         // Checks if selected answer is correct
         acceptingAnswers = false;
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
+        const selectedAnswer = selectedChoice.dataset.number;
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
@@ -849,7 +849,7 @@ choices.forEach(choice => {
             selectedChoice.classList.remove(classToApply);
             getNewQuestion();
         }, 2000);
-    })
+    });
 });
 
 startGame();
@@ -857,22 +857,26 @@ startGame();
 // Functions to control background music and answer sounds
 
 function toggleMusic() {
+    let backgroundMusic = document.getElementById('background-music');
     if (backgroundMusic.paused) {
         backgroundMusic.play();
-        backgroundMusic.volume = 0.25;
+        backgroundMusic.volume = 0.1;
     } else {
         backgroundMusic.pause();
     }
 }
 
 function toggleSound() {
+    let answerSound = document.getElementById('answer-sound');
     if (answerSound.muted === true) {
         answerSound.muted = false;
+        answerSound.volume = 0.2;
     } else {
         answerSound.muted = true;
     }
 }
 
 function playSound() {
-    answerSound.play()
+    let answerSound = document.getElementById('answer-sound');
+    answerSound.play();
 }
