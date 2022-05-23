@@ -392,10 +392,10 @@ window.addEventListener('DOMContentLoaded', () => {
         {
             question: 'What is the name of the strait that Modern Humans travelled over to reach the Americas?',
             choice1: 'Hormuz Strait',
-            choice2: 'Beiring Strait',
+            choice2: 'Bering Strait',
             choice3: 'Bosphorus Strait',
             answer: 2,
-            answerText: 'Beiring Strait'
+            answerText: 'Bering Strait'
         },
         {
             question: 'The tablet of Ea-nasir, dated to over 4000 years old, is the oldest written example of what?',
@@ -510,7 +510,7 @@ window.addEventListener('DOMContentLoaded', () => {
             answerText: 'Little Willie'
         },
         {
-            question: 'The Commonwealth of Australia was establish in 1901 and united the disparate colonies into one nation. Which coloney rejected unification and established an independent dominion in 1907?',
+            question: 'The Commonwealth of Australia was establish in 1901 and united the disparate colonies into one nation. Which colony rejected unification and established an independent dominion in 1907?',
             choice1: 'Fiji',
             choice2: 'New Zealand',
             choice3: 'Tasmania',
@@ -790,7 +790,7 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
             let instructions = document.getElementById('instructions');
             instructions.innerText = `Test your History Knowledge with this challenging quiz!
-             Click on your desired difficulty below and try you hand at ${maxQuestions} questions.
+             Click on your desired difficulty below and try your hand at ${maxQuestions} questions.
               Read the question and click on the answer you think is the correct one.
                You'll find out whether you're right or wrong and then the next question will appear ready for you!`
         };
