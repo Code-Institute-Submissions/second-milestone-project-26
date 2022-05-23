@@ -34,6 +34,11 @@ window.addEventListener('DOMContentLoaded', () => {
     let questionCounter = 0;
     let availableQuestions = [];
 
+    // Variables for rememebering user audio choice
+
+    let musicMemory = window.localStorage.getItem('bckgrdMusic');
+    let soundMemory = window.localStorage.getItem('answerSound');
+
     // Easy Question Roster
 
     let easyQuestions = [{
@@ -769,6 +774,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Start Game Function
 
     function startGame() {
+        checkAudio();
         questionCounter = 0;
         score = 0;
         level = difficulty.dataset.number;
@@ -787,7 +793,7 @@ window.addEventListener('DOMContentLoaded', () => {
              Click on your desired difficulty below and try you hand at ${maxQuestions} questions.
               Read the question and click on the answer you think is the correct one.
                You'll find out whether you're right or wrong and then the next question will appear ready for you!`
-        }
+        };
     }
 
     // Move to next question function
@@ -869,10 +875,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (backgroundMusic.paused) {
             backgroundMusic.play();
             backgroundMusic.volume = 0.1;
-            localStorage['bckgrdMusic'] = true;
+            window.localStorage.setItem('bckgrdMusic', 'true');
         } else {
             backgroundMusic.pause();
-            localStorage['bckgrdMusic'] = false;
+            window.localStorage.setItem('bckgrdMusic', 'false');
         }
     }
 
@@ -881,16 +887,38 @@ window.addEventListener('DOMContentLoaded', () => {
         if (answerSound.muted === true) {
             answerSound.muted = false;
             answerSound.volume = 0.1;
-            localStorage['answerSound'] = true;
+            window.localStorage.setItem('answerSound', 'true');
         } else {
             answerSound.muted = true;
-            localStorage['answerSound'] = false;
+            window.localStorage.setItem('answerSound', 'false');
         }
     }
 
     function playSound() {
         let answerSound = document.getElementById('answer-sound');
         answerSound.play();
+    }
+
+    function checkAudio() {
+        let soundInput = document.getElementById('sound');
+        let backgrndInput = document.getElementById('bckgrnd');
+        if (musicMemory === 'true' && soundMemory === 'true') {
+            backgrndInput.checked = true;
+            toggleMusic();
+            soundInput.checked = true;
+            toggleSound();
+        } else if (musicMemory === 'false' && soundMemory === 'true') {
+            backgrndInput.checked = false;
+            soundInput.checked = true;
+            toggleSound();
+        } else if (musicMemory === 'true' && soundMemory === 'false') {
+            backgrndInput.checked = true;
+            toggleMusic();
+            soundInput.checked = false;
+        } else {
+            backgrndInput.checked = false;
+            soundInput.checked = false;
+        }
     }
 
 });
