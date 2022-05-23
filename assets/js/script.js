@@ -778,8 +778,7 @@ function startGame() {
         availableQuestions = [...hardQuestions];
         getNewQuestion();
     } else {
-        let url = 'https://youtu.be/dQw4w9WgXcQ';
-        window.open(url, '_blank');
+        musicToggle.focus();
     }
 }
 

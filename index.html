@@ -23,10 +23,10 @@
             <span class="titleContainer">
                 <i class="fa-solid fa-earth-africa titleIcon"></i>
             </span>
-            <span class="titleContainer" id="titleText">
+            <div class="titleContainer" id="titleText">
                 <h1>History Quiz of the World</h1>
                 <p>A general knowledge quiz for the discerning history buff!</p>
-            </span>
+            </div>
             <span class="titleContainer">
                 <i class="fa-solid fa-book-atlas titleIcon"></i>
             </span>
@@ -35,22 +35,22 @@
         <div id="audioBar">
             <div class="audioContainer">
                 <h4>Music</h4>
-                <audio id="backgroundMusic" loop>
+                <audio id="backgroundMusic" loop="true">
                     <source src="assets/audio/tape-star.mp3" type="audio/mpeg">
                 </audio>
                 <label class="audioSwitch">
                     <input type="checkbox">
-                    <span id="backgroundSlider" class="slider"></span>
+                    <span id="background-slider" class="slider"></span>
                 </label>
             </div>
             <div class="audioContainer">
                 <h4>Sounds</h4>
-                <audio id="answerSound" muted="true">
+                <audio id="answerSound" muted>
                     <source src="assets/audio/questionanswer.mp3" type="audio/mpeg">
                 </audio>
                 <label class="audioSwitch">
                     <input type="checkbox">
-                    <span id="soundsSlider" class="slider"></span>
+                    <span id="sounds-slider" class="slider"></span>
                 </label>
             </div>
             <!--Navigation Link-->
@@ -62,7 +62,7 @@
     <!--Main Page-->
     <section id="heroImage">
         <!--Quiz Game Container-->
-        <div class="container quiz">
+        <div class="container quiz" id="difficulty" data-number="0">
             <div class="container text">
                 <h3>Choose you difficulty!</h3>
             </div>
