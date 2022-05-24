@@ -260,6 +260,7 @@ This site was deployed using the Github Pages platform. To deploy a site with Pa
 - The desktop background images was sourced from Jimmy Tech on [Pexels](https://www.pexels.com/photo/ancient-greek-temple-951531/).
 - The mobile background image was sourced from Andrea Piacquadio on [Pexels](https://www.pexels.com/photo/astronomical-clock-in-prague-820735/).
 
+
 [Back to top](<#contents>)
 
 # Acknowledgements
