@@ -36,8 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Variables for rememebering user audio choice
 
-    let musicMemory = window.localStorage.getItem('bckgrdMusic');
-    let soundMemory = window.localStorage.getItem('answerSound');
+    let musicMemory = window.sessionStorage.getItem('bckgrdMusic');
+    let soundMemory = window.sessionStorage.getItem('answerSound');
 
     // Easy Question Roster
 
@@ -792,8 +792,8 @@ window.addEventListener('DOMContentLoaded', () => {
             instructions.innerText = `Test your History Knowledge with this challenging quiz!
              Click on your desired difficulty below and try your hand at ${maxQuestions} questions.
               Read the question and click on the answer you think is the correct one.
-               You'll find out whether you're right or wrong and then the next question will appear ready for you!`
-        };
+               You'll find out whether you're right or wrong and then the next question will appear ready for you!`;
+        }
     }
 
     // Move to next question function
@@ -875,10 +875,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (backgroundMusic.paused) {
             backgroundMusic.play();
             backgroundMusic.volume = 0.1;
-            window.localStorage.setItem('bckgrdMusic', 'true');
+            window.sessionStorage.setItem('bckgrdMusic', 'true');
         } else {
             backgroundMusic.pause();
-            window.localStorage.setItem('bckgrdMusic', 'false');
+            window.sessionStorage.setItem('bckgrdMusic', 'false');
         }
     }
 
@@ -887,10 +887,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (answerSound.muted === true) {
             answerSound.muted = false;
             answerSound.volume = 0.1;
-            window.localStorage.setItem('answerSound', 'true');
+            window.sessionStorage.setItem('answerSound', 'true');
         } else {
             answerSound.muted = true;
-            window.localStorage.setItem('answerSound', 'false');
+            window.sessionStorage.setItem('answerSound', 'false');
         }
     }
 
