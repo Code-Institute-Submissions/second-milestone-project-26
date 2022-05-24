@@ -574,7 +574,7 @@ input:checked+.slider:before {
 
     .quiz {
         top: 15px;
-        min-height: 350px;
+        min-height: 420px;
     }
 
     .text {

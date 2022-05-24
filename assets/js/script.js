@@ -862,7 +862,7 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(function () {
                 selectedChoice.classList.remove(classToApply);
                 getNewQuestion();
-            }, 2000);
+            }, 3000);
         });
     });
 
