@@ -77,7 +77,17 @@ The scheme was adopted from Color My Soul from [Pinterest](https://www.pinterest
 
 # Existing Features
 
-##
+## Audio Controls
+
+The audio controls at the top of the screen allow the user to control background music and sounds when the user clicks on buttons. The controls use a slider to indicate the ON and OFF state. The user's choices are also stored in the Session Storage API so the user doesn't have to re-select their choices between pages.
+
+![Audio Controls](assets/readme-images/audio-controls.png)
+
+## Home Page and Difficulty Selection
+
+The user starts at the home page and may select their desired difficulty from three colour-coded options. The text content area of the quiz contains instructions for the user on this page.
+
+![Home Page and Difficulty Selection](assets/readme-images/difficulty-selection.png)
 
 [Back to top](<#contents>)
 

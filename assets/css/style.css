@@ -556,6 +556,18 @@ input:checked+.slider:before {
     }
 }
 
+/* For screens 900px tall or below */
+
+@media screen and (max-height: 900px) {
+    .quiz {
+        top: 15px;
+    }
+
+    .progress {
+        top: 30px;
+    }
+}
+
 /* For screens 800px tall or below */
 
 @media screen and (max-height: 800px) {
