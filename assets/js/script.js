@@ -36,8 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Variables for rememebering user audio choice
 
-    let musicMemory = window.sessionStorage.getItem('bckgrdMusic');
-    let soundMemory = window.sessionStorage.getItem('answerSound');
+    let musicMemory = window.localStorage.getItem('bckgrdMusic');
+    let soundMemory = window.localStorage.getItem('answerSound');
 
     // Easy Question Roster
 
@@ -888,11 +888,11 @@ window.addEventListener('DOMContentLoaded', () => {
             backgroundMusic.play();
             backgroundMusic.volume = 0.1;
             //Sets the session storage to remember user choice from page to page 
-            window.sessionStorage.setItem('bckgrdMusic', 'true');
+            window.localStorage.setItem('bckgrdMusic', 'true');
         } else {
             backgroundMusic.pause();
             //Sets the session storage to remember user choice from page to page
-            window.sessionStorage.setItem('bckgrdMusic', 'false');
+            window.localStorage.setItem('bckgrdMusic', 'false');
         }
     }
     
@@ -904,11 +904,11 @@ window.addEventListener('DOMContentLoaded', () => {
             answerSound.muted = false;
             answerSound.volume = 0.1;
             //Sets the session storage to remember user choice from page to page
-            window.sessionStorage.setItem('answerSound', 'true');
+            window.localStorage.setItem('answerSound', 'true');
         } else {
             answerSound.muted = true;
             //Sets the session storage to remember user choice from page to page
-            window.sessionStorage.setItem('answerSound', 'false');
+            window.localStorage.setItem('answerSound', 'false');
         }
     }
 
