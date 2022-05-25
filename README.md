@@ -189,7 +189,7 @@ History Quiz of the World was tested on the following browsers with no issues to
   * Audio files failed to load correctly and would not play as expected. Deleted files and reloaded new ones to remove corrupted data.
   * Horizontal tablets display the quiz container too small for the content. Corrected with changes to media queries
   * Quiz-hard.html was incorrectly named so navigation failed at user selection. Corrected when typo was dealt with.
-  * Javascript would attempt to play audio without user input and desynchronise from slider displays on page. Corrected by changine API from localStorage to sessionStorage.
+  * Javascript would attempt to play audio without user input and desynchronise from slider displays on page. Corrected by changine API from sessionStorage to localStorage.
   * The Favicon icon failed to load on pages outside of dev environment. HTML was adjusted to fix the issue.
 
 [Back to top](<#contents>)
