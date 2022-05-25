@@ -17,7 +17,6 @@ This web based application is designed to be a fun and engaging history quiz. It
 
 
 * [**Existing Features**](<#existing-features>)
-  *
 
 * [**Desired Features**](<#desired-features>)
 
@@ -161,14 +160,14 @@ A section of the JSHint results are below:
 
 * The responsive design test was carried out successfully on all pages using [Responsive Design Checker](https://responsivedesignchecker.com). The responsive design rules acted correctly as designed across the below screen sizes. Content moved to the intended positions as expected and navigation links worked as intended.
 
-Display >1200px = Pass
-Display <1200px = Pass
-Ipad pro (1366x1024px) = Pass
-Ipad air (768x1024px) = Pass
-Iphone plus (414x736px) = Pass
-Sony Xperia (360x640px) = Pass
-Iphone (320x480px) = Pass
-Nest Hub Max (1280x800px) = Pass
+- Display >1200px = Pass
+- Display <1200px = Pass
+- Ipad pro (1366x1024px) = Pass
+- Ipad air (768x1024px) = Pass
+- Iphone plus (414x736px) = Pass
+- Sony Xperia (360x640px) = Pass
+- Iphone (320x480px) = Pass
+- Nest Hub Max (1280x800px) = Pass
 
 [Back to top](<#contents>)
 
@@ -221,7 +220,7 @@ This site was deployed using the Github Pages platform. To deploy a site with Pa
 
 ### **To fork the repository**
  A copy of the page can be done through forking the Github account. This copy can be viewed and changed without modifying the original. To fork the repository one must:
-  1. Log in to **GitHub** and locate the [repository](https://github.com/Miles-Cownie/first-milestone-project)
+  1. Log in to **GitHub** and locate the [repository](https://github.com/Miles-Cownie/second-milestone-project)
   2. Select the **fork** option in the top right hand corner of the page to create a copy of the repository.
 
   ![Fork button](assets/readme-images/fork.png)
